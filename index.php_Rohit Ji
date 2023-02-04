@@ -1,0 +1,389 @@
+<?php include "database_connect.php";?>
+<!DOCTYPE html>
+<!-- 
+
+-->
+<!--[ifIE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THE WINDSON GROUP</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="	advisor, analytical, audit, broker, brokerage, business, company, consulting, currency, exchange, finance, financial, insurance, modern, trader">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/images/fav.png"/>
+	<style>
+.holder { 
+  background-color:#ccc;
+  width:300px;
+  height:250px;
+  overflow:hidden;
+  padding:10px;
+  font-family:Helvetica;
+}
+.holder .mask {
+  position: relative;
+  left: 0px;
+  top: 10px;
+  width:300px;
+  height:240px;
+  overflow: hidden;
+}
+.holder ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+  position: relative;
+}
+.holder ul li {
+  padding:10px 0px;
+}
+.holder ul li a {
+  color:darkred;
+  text-decoration:none;
+}
+</style>
+</head>
+<body>
+<div class="me-main-wraper">
+    <!-- main header -->
+    <?php include "include/header.php";?>
+    <!-- banner -->
+    <div class="me-banner-three">
+        <div class="container">
+            <img src="assets/images/topboy1.png" alt="image" height="60%" width="40%" class="img-fluid me-shape-three">
+            <img src="assets/images/shape-four.png" alt="image" class="img-fluid me-shape-four">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="me-banner-three-text">
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="me-banner-three-img">
+<!--                        <img src="assets/images/banner-three.png" alt="image" class="img-fluid"> -->
+
+      <!-- form start -->
+
+											<h3>Register Yourself</h3>
+											<form action="process_register.php" method="post" style="background-image: url('assets/images/shape-three.png')">
+												<div >
+													<div >
+														<label for="name">Your Name</label>
+														<input type="text" id="name" class="form-control" name="name" required>
+													</div>
+												</div>
+												<div >
+													<div >
+														<label for="Mobile Number">Mobile Number</label>
+														<input type="number" id="mobile" class="form-control" name="mobile" maxlength="10" required>
+													</div>
+												</div>
+												<div >
+													<div>
+														<label for="Email">Email ID</label>
+															<input type="email" id="email" class="form-control" name="email" required>
+													</div>
+												</div>
+												
+												<div >
+													<div >
+														<label for="Sponsor I">Sponsor ID</label>
+														<input type="text" id="s_id" value="wg<?php echo $_GET[d_id];?>" class="form-control" readonly name="s_id" required>
+													</div>
+												</div>
+												<div >
+													<div >
+														<label for="Sponsor I">Sponsor Name</label>
+														<?php
+														$sqls="SELECT * FROM `distributor` WHERE `d_id`='$_GET[d_id]';";
+										$fed=$con->query($sqls);
+										$dfss=mysqli_fetch_assoc($fed);
+														?>
+														
+														<input type="text" id="s_name" value="<?php echo $dfss[name];?>" class="form-control" readonly name="s_id" required>
+													</div>
+												</div>
+												<div >
+													<div >
+														<label for="Password">Create Your Password</label>
+														<input type="password" id="s_id" class="form-control" name="password" required>
+													</div>
+												</div>
+												<div >
+													<div>
+														<label for="Email">Pancard No.</label>
+															<input type="text" class="form-control" name="pancard" required>
+													</div>
+												</div>
+											<br>&nbsp;
+													<div>
+												<label><input type="checkbox" required style="height:20px;width: 30px;"> I agree to The Windson Group<a href="javascript:;" class="me-login-menu" data-toggle="modal" data-target="#meTerms">Terms of Service</a></label>	
+												 
+													
+												</div>
+
+
+												<div >
+													<div >
+														<input type="submit" class="btn btn-primary btn-block" value="Submit" name="reg_submit">
+													</div>
+												</div>
+											</form>	
+										</div>
+
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+	    <!-- form end -->
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service two -->
+    <div class="me-service-three">
+        <div class="container">
+             <div class="me-heading2">
+            <h1 class="me-step">3 Simple Steps </h1>
+            <br>
+            <h2 align="center" >To Build Wealth Follow The Steps</h2>
+            <br> &nbsp <br>
+            <div class="row">
+                
+                <div class="col-md-4 col-sm-6">
+                    
+                    <div class="me-service-three-box">
+                        <img src="assets/images/step1.png" alt="Step 1" >
+                        <h4>Step 1</h4>
+                        <p>In Step 1 you just have to open a free Demat Acoount with SEBI authorised Stock Brokrage Companies.</p><br><br>
+                        
+                                               
+                      
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="me-service-three-box">
+                        <img src="assets/images/step2.png" alt="Step 2" >
+                        <h4>Step 2</h4>
+                        <p>In Step 2 After opening your Demat account,complete your First free basic trade. We will guide you for adding fund, Buy & Sell share, etc.</p><br>
+                        
+                               
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="me-service-three-box">
+                        <img src="assets/images/step3.png" alt="Step 3" >
+                        <h4>Step 3</h4>
+                        <p>In Step 3 After completing your first basic trade, You ID will be activated in our platform completely free. After that you can refer your friends & family and earn unlimited Income.</p>
+                       
+                                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About two -->
+   
+    
+    <! -- Why Choose Us -- >
+    <div class="me-safety me-padder-top-less">
+        <div class="container">
+            <div class="me-heading2">
+                
+                
+                <h1 class="me-step">Why Choose Us</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="me-safety-img">
+                        <img src="assets/images/front.jpeg" alt="image" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="me-faq-box">
+                        <div class="accordion" id="accordionExample">
+                            <div class="me-faq-list">
+                                <p class="me-faq-head " >
+                                    Free Joining</p>
+                                
+                                </div>
+                            </div>
+                            <br>
+                            <div class="me-faq-list">
+                                <p class="me-faq-head" data-toggle="collapse" data-target="#me-faq-two">Free Online Training</p>
+                                
+                            </div>
+                            <div class="me-faq-list">
+                                <p class="me-faq-head" data-toggle="collapse" data-target="#me-faq-three">
+                                    Work From Home</p>
+                               
+                            </div>
+                            <div class="me-faq-list">
+                                <p class="me-faq-head" data-toggle="collapse" data-target="#me-faq-three">
+                                    Flexible Working Hours</p>
+                               
+                            </div>
+                            <div class="me-faq-list">
+                                <p class="me-faq-head" data-toggle="collapse" data-target="#me-faq-three">
+                                    Regular Payment with advance facility</p>
+                               
+                            </div>
+                            <div class="me-faq-list">
+                                <p class="me-faq-head" data-toggle="collapse" data-target="#me-faq-three">
+                                    Unlimited Earning</p>
+                               
+                            </div>
+                            <div class="me-faq-list">
+                                <p class="me-faq-head" data-toggle="collapse" data-target="#me-faq-three">
+                                    Safe & Secure</p>
+                               
+                            </div>
+                            <div class="me-faq-list">
+                                <p class="me-faq-head" data-toggle="collapse" data-target="#me-faq-three">
+                                    Guidence for Financial Goal Setup</p>
+                               
+                            </div>
+                            <div class="me-faq-list">
+                                <p class="me-faq-head" data-toggle="collapse" data-target="#me-faq-three">
+                                    Zero Liability</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Safety -->
+    <div class="me-safety me-padder-top-less  me-padder-bottom">
+        <div class="container">
+            <div class="me-heading2">
+                          
+                <h1 class="me-step">Important Updates</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="me-safety-img">
+                        <img src="assets/images/safty.png" alt="image" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                                           <!-- news scroll -->
+	<iframe src="news.php" seamless="yes" height="400px" scrollbar="no" width="500px"
+    style="border:0" allowfullscreen></iframe>
+                     
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--         </div>
+    </div> -->
+    <!-- Team -->
+    
+    <!-- Blog -->
+    <!-- Blog -->
+   
+    <!-- Partners -->
+    <div class="me-partners me-padder-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="me-partners-logo">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/scroll1.jpg" alt="image"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/scroll2.jpg" alt="image"/>
+                                </div>
+                                <div class="swiper-slide">
+                                   <img src="images/scroll3.jpg" alt="image"/>
+                                </div>
+                                <div class="swiper-slide">
+                                   <img src="images/scroll4.jpg" alt="image"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/scroll5.jpg" alt="image"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <?php include "include/footer.php";?>
+</div>
+
+<script type="text/javascript">
+jQuery.fn.liScroll = function (settings) {
+  settings = jQuery.extend({
+    travelocity: 0.03 },
+  settings);
+  return this.each(function () {
+    var $strip = jQuery(this);
+    $strip.addClass("newsticker");
+    var stripHeight = 1;
+    $strip.find("li").each(function (i) {
+      stripHeight += jQuery(this, i).outerHeight(true); // thanks to Michael Haszprunar and Fabien Volpi
+    });
+    var $mask = $strip.wrap("<div class='mask'></div>");
+    var $tickercontainer = $strip.parent().wrap("<div class='tickercontainer'></div>");
+    var containerHeight = $strip.parent().parent().height(); //a.k.a. 'mask' width 	
+    $strip.height(stripHeight);
+    var totalTravel = stripHeight;
+    var defTiming = totalTravel / settings.travelocity; // thanks to Scott Waye		
+    function scrollnews(spazio, tempo) {
+      $strip.animate({ top: '-=' + spazio }, tempo, "linear", function () {$strip.css("top", containerHeight);scrollnews(totalTravel, defTiming);});
+    }
+    scrollnews(totalTravel, defTiming);
+    $strip.hover(function () {
+      jQuery(this).stop();
+    },
+    function () {
+      var offset = jQuery(this).offset();
+      var residualSpace = offset.top + stripHeight;
+      var residualTime = residualSpace / settings.travelocity;
+      scrollnews(residualSpace, residualTime);
+    });
+  });
+};
+
+$(function () {
+  $("ul#ticker01").liScroll();
+});
+//# sourceURL=pen.js
+    </script>
+	<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/SmoothScroll.min.js"></script>
+<script src="assets/js/ui_range_slider.js"></script>
+<script src="assets/js/canvasjs.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>

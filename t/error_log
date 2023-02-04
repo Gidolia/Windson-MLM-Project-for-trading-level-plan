@@ -1,0 +1,5 @@
+[28-Jun-2020 06:10:41 UTC] PHP Warning:  include(database_connect.php): failed to open stream: No such file or directory in /home/windsongroup/public_html/t/contact.php on line 1
+[28-Jun-2020 06:10:41 UTC] PHP Warning:  include(database_connect.php): failed to open stream: No such file or directory in /home/windsongroup/public_html/t/contact.php on line 1
+[28-Jun-2020 06:10:41 UTC] PHP Warning:  include(): Failed opening 'database_connect.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/windsongroup/public_html/t/contact.php on line 1
+[28-Jun-2020 07:56:07 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/windsongroup/public_html/t/process_register.php on line 31
+[28-Jun-2020 07:57:28 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/windsongroup/public_html/t/process_register.php on line 31
